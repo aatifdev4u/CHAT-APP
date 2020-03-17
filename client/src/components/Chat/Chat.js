@@ -26,12 +26,6 @@ function Chat({ location }) {
             if(error) alert(error);
         });
        
-        // return ()=>{
-        //     socket.emit('disconnect');
-
-        //     socket.off();
-        // }
-
     }, [ENDPOINT, location.search])
 
     useEffect(() => {
@@ -60,11 +54,10 @@ function Chat({ location }) {
         }
 
     }
-    console.log(message, messages);
+   
     return (
         <div className="outerContainer">
             <div className="container">
-                {/* Info Bar who has joined */}
                 <Infobar room={room} />
                 <Messages messages={messages} name={name} />
                <Input
